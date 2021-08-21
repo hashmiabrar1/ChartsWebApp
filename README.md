@@ -3,7 +3,8 @@ end time (which is 0.01 in the example graph below) and maximum value (which is 
 button to confirm the values.
 ![image](https://user-images.githubusercontent.com/25429301/130308475-f63beaa8-0ea0-4ada-9723-99c93fc371ed.jpeg)
 
-<img width="640" alt="thumbnail_image" src="https://user-images.githubusercontent.com/25429301/130334139-2c943d55-b285-4af2-9e8e-ee2e5a6c9998.png">
+<img width="820" alt="image" src="https://user-images.githubusercontent.com/25429301/130334151-ae1ea11e-cc34-4543-9b3f-a43f851ce948.png">
+
 
 
 
