@@ -1,4 +1,4 @@
-This is an Angular web app to create a simple symmetrical triangule graph like. The user enters three values, namely start time (which is 0 in the example graph below), 
+This is an Angular web app to create a simple symmetrical triangule graph. The user enters three values, namely start time (which is 0 in the example graph below), 
 end time (which is 0.01 in the example graph below) and maximum value (which is 50 in the graph below) and then a 
 button to confirm the values.
 
