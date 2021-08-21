@@ -68,13 +68,13 @@ export class LineChartComponent implements AfterViewInit {
           xAxes: [{
             type: 'linear',
             ticks: {
-                beginAtZero: true, max:0.02
+
             }
           }],
           yAxes: [{
             type: 'linear',
             ticks: {
-                beginAtZero: true, max:50
+
             }
           }],
         },
