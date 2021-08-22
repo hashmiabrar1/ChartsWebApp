@@ -1,0 +1,58 @@
+<div class="toolbar" role="banner">
+  <img
+    width="140"
+    alt="Angular Logo"
+    src="assets/niu.png"
+  />
+  <span>Northern Illinois University</span>
+    <div class="spacer"></div>
+</div>
+<br> <br>
+<h2>Enter the following values to create a Triangular graph:</h2>
+<div>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+     
+
+        Start Time<input name="first" [(ngModel)]="x" required #first="ngModel">
+        End Time<input name="last" [(ngModel)]="y" #last="ngModel" required>
+        Maximum Value<input name="max" [(ngModel)]="z" required #max="ngModel">
+
+
+
+      <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Create Graph</button>
+</form>
+
+        <div *ngIf="last.errors?.customMax"> 
+          Maximum number can be 0.019.
+        </div> 
+
+      <app-line-chart [datap]="staticData"></app-line-chart>
+      </div>
+
+<br>
+
+<div>
+
+<h2>Enter the following values to create a Sinusoidal graph:</h2>
+
+
+<form #g="ngForm" (ngSubmit)="onSubmit2(g)">
+     
+
+        Period<input name="period" [(ngModel)]="p" required 
+        #period="ngModel">
+        Amplitude<input name="amplitude" [(ngModel)]="q" 
+        #amplitude="ngModel" required>
+
+
+      <button class="btn btn-lg btn-primary btn-block btn-signin" 
+      type="submit">Create Graph</button>
+</form>
+
+
+<app-sinusoidal-chart [datav]="staticData2"></app-sinusoidal-chart>
+</div>
+
+
+
+

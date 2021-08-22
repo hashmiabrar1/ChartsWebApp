@@ -7,38 +7,7 @@ import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  template: `
-  <div class="toolbar" role="banner">
-  <img
-    width="140"
-    alt="Angular Logo"
-    src="assets/niu.png"
-  />
-  <span>Northern Illinois University</span>
-    <div class="spacer"></div>
-</div>
-<br> <br>
-<h2>Enter the following values to create a graph:</h2>
-<div>
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-     
-
-        Start Time<input name="first" [(ngModel)]="x" required #first="ngModel">
-        End Time<input name="last" [(ngModel)]="y" #last="ngModel" required>
-        Maximum Value<input name="max" [(ngModel)]="z" required #max="ngModel">
-
-
-
-      <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Create Graph</button>
-        </form>
-
-        <div *ngIf="last.errors?.customMax"> 
-          Maximum number can be 0.019.
-        </div> 
-
-      <app-line-chart [datap]="staticData"></app-line-chart>
-      </div>
-  `,
+  templateUrl: './app.component.html',
   styles:[`
     .toolbar {
     position: absolute;
@@ -65,9 +34,12 @@ import {NgForm} from '@angular/forms';
 export class AppComponent {
 
 staticData: any;
+staticData2: any;
 public x:String="0";
 public y:String="0.02"
 public z:String="50"
+public p:String="2"
+public q:String="4"
 
 
   constructor() {
@@ -75,6 +47,10 @@ public z:String="50"
 
   onSubmit(f: NgForm) {
     this.staticData=f.value;
-    console.log(this.staticData);
+  }
+
+  onSubmit2(g: NgForm){
+    this.staticData2=g.value;
+
   }
 }

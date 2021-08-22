@@ -24,6 +24,7 @@ export class LineChartComponent implements AfterViewInit {
   @ViewChild('chart')
   private chartRef: ElementRef;
   private chart: Chart;
+  private chart2: Chart;
   public data: Point[] = [{x: 0, y: 0}, {x: 0.01, y: 50}, {x: 0.02, y: 0}];
 
   // public temp: Point[] = [{x: , y: 0}, {x: 0.01, y: 50}, {x: 0.02, y: 0}];
@@ -53,7 +54,8 @@ export class LineChartComponent implements AfterViewInit {
         datasets: [{
           label: 'Data Analysis',
           data: this.data,
-          fill: false
+          fill: false,
+          borderColor: "rgba(0,0,255,0.5)"
         }]
       },
       options: {
@@ -91,7 +93,8 @@ export class LineChartComponent implements AfterViewInit {
         datasets: [{
           label: 'Data Analysis',
           data: this.data,
-          fill: false
+          fill: false,
+          borderColor: "rgba(0,0,255,0.5)",
         }]
       },
       options: {
@@ -109,6 +112,37 @@ export class LineChartComponent implements AfterViewInit {
         }
       }
     });
+
+
+// var c = <HTMLCanvasElement> document.getElementById("myCanvas");
+// var ctx = c.getContext("2d");
+// ctx.moveTo(50,50);
+// ctx.bezierCurveTo(120,-100,200,250,250,50);
+// ctx.bezierCurveTo(300,-100,350,250,430,50);
+// ctx.lineWidth = 5;
+// ctx.strokeStyle = '#003300';
+// ctx.stroke();
+
+// var chart = new Chart("chartContainer", {
+//   title:{
+//     text: "Render Chart for Sin Function"
+//   },
+//   axisX:{
+//     title: "Angle (in Degree) →",
+//     interval: 90    
+//   },
+//   axisY: {
+//     title: "sin(x) →"
+//   },
+//   data: [
+//     {
+//       type: "rangeArea",
+//       dataPoints: []
+//     }         
+//   ]
+// });
+
+ 
 
   }
 }
