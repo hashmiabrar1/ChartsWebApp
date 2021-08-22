@@ -4,7 +4,9 @@ import {Chart, Point} from "chart.js";
   selector: 'app-sinusoidal-chart',
   template: `
     <p>
+      <div id="chartSine">
       <canvas id="myChart" width="180px" height="80px"></canvas>
+      <div>
   `,
   styles: [
   ]
@@ -35,6 +37,9 @@ export class SinusoidalChartComponent implements OnInit {
     var xValues = [];
     var yValues = [];
     generateData(0, Number(per), 30, Number(amp));
+
+    document.getElementById("chartSine").innerHTML = '&nbsp;';
+    document.getElementById("chartSine").innerHTML = '<canvas id="myChart"></canvas>';
 
     new Chart("myChart", {
       type: "line",
