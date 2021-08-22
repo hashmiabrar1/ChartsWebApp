@@ -5,6 +5,12 @@ button to confirm the values.
 
 <img width="820" alt="image" src="https://user-images.githubusercontent.com/25429301/130334151-ae1ea11e-cc34-4543-9b3f-a43f851ce948.png">
 
+Update-
+User input is taken for two values, namely period and amplitude and then a sinusoidal(sine) graph is created.
+
+<img width="1355" alt="image" src="https://user-images.githubusercontent.com/25429301/130370752-172aec5a-4fa0-45c8-9ad7-50c7862a4955.png">
+
+
 
 
 
